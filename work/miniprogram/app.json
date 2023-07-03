@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/phoneLogin/phoneLogin",
+    "pages/video/video",
+    "pages/recommendSong/recommendSong",
+    "pages/songDetail/songDetail",
+    "pages/search/search",
+    "pages/songList/songList",
+    "pages/searchList/searchList",
+    "pages/recently/recently",
+    "pages/charts/charts",
+    "pages/chartsSong/chartsSong"
+  ],
+  "tabBar": {
+    "selectedColor": "#C00000",
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "./images/tabBarImg/music.png",
+        "selectedIconPath": "./images/tabBarImg/music_active.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "./images/tabBarImg/video.png",
+        "selectedIconPath": "./images/tabBarImg/video_active.png"
+      },
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "我的",
+        "iconPath": "./images/tabBarImg/my.png",
+        "selectedIconPath": "./images/tabBarImg/my_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

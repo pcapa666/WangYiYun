@@ -1,0 +1,27 @@
+<view class="searchContainer">
+  <view class="ListContainer">
+    <view class="ListHeader">
+      <view class="ListHeaderLeft" bindtap="allRecentPlay">
+        <text class="iconfont icon-start-full"></text>
+        <text>播放全部</text>
+      </view>
+      <view class="iconfont icon-multipleChoiceList"></view>
+    </view>
+
+    <scroll-view class="listScroll" scroll-y>
+      <view class="srollItem" 
+          wx:for="{{recentList}}" 
+          wx:key="resourceId" 
+          data-index="{{index}}" 
+          id="{{item.data.id}}"    
+          bindtap="toSongDetail">
+        <image src="{{item.data.al.picUrl}}" mode="" />
+        <view class="musicInfo" >
+          <text class="musicName">{{item.data.name}}</text>
+          <text class="author">{{item.data.ar[0].name}} - {{item.data.al.name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo-shuxiang"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

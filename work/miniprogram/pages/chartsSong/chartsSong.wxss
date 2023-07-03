@@ -1,0 +1,118 @@
+/* pages/songList/songList.wxss */
+.recommendSoneContanier .hearder{
+  width: 100%;
+  /* background-color: blanchedalmond; */
+  height: 350rpx;
+  position: relative;
+}
+
+.recommendSoneContanier .hearder image{
+  height: 1000rpx;
+  width: 1000rpx;
+  /* filter: blur(50rpx); */
+}
+
+.recommendSoneContanier .text{
+  height: 350rpx;
+  width: 100%;
+  color: white;
+  position: absolute;
+  display: flex;
+  top: -20rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recommendSoneContanier .text .urser{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20rpx;
+}
+.recommendSoneContanier .text .urser text{
+  text-align: center;
+  margin-top: 30rpx;
+  width: 500rpx;
+}
+
+
+.ListContainer{
+  position: relative;
+  top: -20rpx;
+  padding: 30rpx 0 0 20rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+.ListHeader .icon-start-full{
+  color: red;
+  margin-right: 20rpx;
+}
+.ListHeader .iconfont{
+  font-size: 45rpx;
+}
+
+.ListHeader{
+  height: 55rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.ListHeader .ListHeaderLeft{
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+
+.listScroll{
+  height: calc(100vh - 110rpx);
+}
+
+.srollItem{
+  position: relative;
+  display: flex;
+  margin-bottom:  20rpx;
+}
+
+.srollItem image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 8rpx;
+}
+.srollItem .iconfont{
+  margin-right: 20rpx;
+}
+
+.musicInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.musicInfo text{
+  height: 40rpx;
+  line-height: 40rpx; 
+  font-size: 24rpx;
+}
+
+.musicInfo .musicName{
+  font-size: 30rpx;
+}
+
+.musicInfo .author{
+  font-size: 25rpx;
+  color: #747171;
+}
+
+.srollItem .iconfont{
+  position: absolute;
+  height: 80rpx;
+  width: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  right: 0;
+}

@@ -1,0 +1,37 @@
+.header{
+  margin-top: 10rpx;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx;
+}
+.searchInput{
+  position: relative;
+  flex: 1;
+  background: rgba(237, 237, 237, 0.3);
+  border-radius: 30rpx;
+}
+
+.searchInput input{
+  margin-left: 50rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+}
+
+.searchIcon{
+  position: absolute;
+  left: 15rpx;
+}
+
+.clear{
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  font-size: 28rpx;
+  color: #474747;
+  z-index: 10;
+}
+.searchBtn{
+  width: 100rpx;
+  text-align: center;
+}

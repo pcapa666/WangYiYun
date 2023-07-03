@@ -1,0 +1,309 @@
+
+.detailContainer{
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  background-color: #f8f7f7;
+}
+.topDetail{
+  margin-top: 10rpx;
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.topDetail .iconfont{
+  position: absolute;
+  right: 15rpx;
+  font-size: 40rpx;
+}
+
+.loginDetail{
+  height: 380rpx;
+  margin-bottom: 40rpx;
+  box-shadow:5px 1px 5px #f3f1f1;
+  /* background-color: yellow; */
+}
+
+.loginItem{
+  text-align: center;
+  position: relative;
+  transform: translateY(40%);
+}
+
+.loginItem image{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+}
+
+.loginItem text{
+  font-size: 180rpx;
+  border-radius: 50%;
+}
+
+.loginItem .iconfont{
+  color:#f9c6c6;
+}
+
+.loginBox{
+  height: 210rpx;
+  background-color: white;
+  border-radius: 25rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* position: absolute; */
+  /* z-index: 99; */
+}
+
+.loginBox text{
+  /* line-height: 210rpx; */
+  margin-top: 40rpx;
+  text-align: center;
+  font-weight: bold;
+  font-size: 45rpx;
+}
+.loginBox .userDetail text{
+  font-weight: normal;
+  font-size: 24rpx;
+  margin-left: 12rpx;
+  color: #cccccc;
+}
+
+.appDetail{
+  background-color: white;
+  height: 400rpx;
+  border-radius: 25rpx;
+  margin-bottom: 40rpx;
+}
+
+
+
+.appTop{
+  height: 300rpx;
+  border-bottom: 1rpx solid #d8d3d3;
+  padding-top:20rpx ;
+  padding-left: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appItem{
+  width: 25%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appItem .iconfont{
+  text-align: center;
+  line-height: 80rpx;
+  color: rgba(240, 19, 19);
+  border-radius: 50%;
+  font-size: 60rpx;
+}
+
+.appItem text{
+  font-size: 25rpx;
+  color: #706b6b;
+}
+.appAdd{
+  justify-content: center;
+  line-height: 65rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #cccccc;
+}
+.appAdd text {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+.loveMusic{
+  height: 200rpx;
+  background-color: white;
+  border-radius: 25rpx;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.loveMusicLeft{
+  width: 60%;
+  height: 100%;
+  padding: 40rpx;
+  display: flex;
+}
+
+.loveMusicLeft .box{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 25rpx;
+  background-color: #ebe9e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.loveMusicLeft .box{
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+
+.loveMusicLeft .box .iconfont{
+  font-size: 50rpx;
+  color: white;
+}
+
+.loveMusicLeft .text{
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0 0 20rpx;
+  width: 300rpx;
+}
+.loveMusicLeft text{
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  color: #a5a5a5;
+}
+
+.loveMusicRight{
+  width: auto;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loveMusicRight .box{
+  height: 40rpx;
+  width: 170rpx;
+  display: flex;
+  border: 1rpx solid #cccccc;
+  border-radius: 25rpx;
+  padding-left:15rpx;
+  padding-top: 5rpx;
+}
+
+.loveMusicRight text{
+  margin-left: 15rpx;
+  font-size: 25rpx;
+}
+
+
+.songSheet{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  color: #a5a5a5;
+  font-size: 30rpx;
+  font-weight: bolder;
+  margin-bottom: 25rpx;
+}
+
+.active{
+  color: black;
+}
+
+.createSheet{
+  /* height:200rpx; */
+  background-color: white;
+  margin-bottom: 25rpx;
+  padding: 20rpx 40rpx;
+  border-radius: 20rpx;
+}
+
+.createList{
+  margin-top: 10rpx;
+}
+
+  .createListItem{
+    height: 140rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    /* background-color: orchid; */
+  }
+
+.iconbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25rpx;
+  background-color: #ebe9e9;
+
+  width: 120rpx;
+  height: 120rpx;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.boxright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20rpx;
+  /* background-color: orange; */
+  width: 450rpx;
+}
+.boxright .musicName{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*模式修改*/
+  -webkit-box-orient: vertical;  /*设置对其模式*/
+  -webkit-line-clamp:1 ; /*设置多行的行数*/
+  font-size: 29rpx;
+}
+.boxright .musicCount{
+  font-size: 25rpx;
+  color: #706b6b;
+}
+
+
+.iconbox image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.iconbox .iconfont{
+  font-size: 60rpx;
+}
+
+
+.collectTop{
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #a5a4a4;
+  height: 40rpx;
+}
+.collectTopRight .iconfont{
+  font-size: 35rpx;
+}
+
+.morePlaylists{
+  /* background-color: orange; */
+  height: 50rpx;
+  border-top: 1rpx solid #eee;
+  text-align: center;
+  line-height: 70rpx;
+  margin-top: 10rpx;
+}
+.morePlaylists text{
+  margin-top: 30rpx;
+}
+
+.Share{
+  /* background-color: palegoldenrod; */
+  position: absolute;
+  right: 60rpx;
+}

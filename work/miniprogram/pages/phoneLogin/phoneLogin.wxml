@@ -1,0 +1,10 @@
+<view class="loginBox">
+   <view class="loginBoxTop">
+     <view class="topItem">
+        <image src="{{qrimgs}}" mode=""/>
+     </view>
+   </view>
+   <view class="tip">
+     <text>扫码登录</text>
+   </view>
+</view>

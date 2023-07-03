@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Swiper":"../../components/swiper/swiper",
+    "navContainer":"../../components/navContainer/navContainer",
+    "NavHeader":"../../components/NavHeader/NavHeader"
+  }
+}

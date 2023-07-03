@@ -1,0 +1,132 @@
+.songDetailContainer{
+  /* background-color: #cccccc; */
+
+}
+
+.rev{
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  background-color: red;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(12rpx);
+  opacity: 0.5;
+}
+
+.abl{
+  z-index: 99;
+  position: relative ;
+}
+
+.songDetailContainer .musicInfo{
+  padding-top: 20rpx;
+  text-align: center;
+  /* background-color: orange; */
+  height: 115rpx;
+  line-height: 55rpx;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-shadow:4rpx 4rpx 2rpx pink;
+}
+
+.musicInfo .musicAuthor{
+  font-size: 30rpx;
+  color: #ebebeb;
+  font-weight: normal;
+}
+
+.musicImagebox{
+  width: 100%;
+  height: 60vh;
+  /* background-color: orange; */
+}
+
+.musicImagebox .discContainer{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicImagebox .discContainer .musicImg{
+  width: 420rpx;
+  height: 420rpx;
+  border-radius: 50%;
+  margin: 20rpx;
+  border: 20rpx solid rgb(211, 208, 208);
+}
+
+.discAnimation{
+  animation: musicImg 12s linear infinite;
+}
+
+@keyframes musicImg{
+  from{}
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.middle{
+  display: flex;
+  justify-content: center;
+}
+
+.progressControl{
+  height: 80rpx;
+  width: 680rpx;
+  line-height: 80rpx;
+  display: flex;
+  position: relative;
+  font-size: 28rpx;
+}
+
+.barControl{
+  position: relative;
+  width: 480rpx;
+  height: 4rpx;
+  background: rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+.audio-currentTime-Bar{
+  height: 4rpx;
+  background-color: red;
+  /* width: 100rpx; */
+  top: 0;
+  left: 0;
+  z-index: 5;
+  position: absolute;
+}
+
+.audio-circle{
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  right: -12rpx;
+  top:-4rpx;
+  z-index: 50;
+}
+
+.musicBottom{
+  height:20vh;
+  /* background-color: paleturquoise; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.musicBottom .iconfont{
+  font-size: 40rpx;
+}
+.musicBottom .Big{
+  font-size: 90rpx;
+}

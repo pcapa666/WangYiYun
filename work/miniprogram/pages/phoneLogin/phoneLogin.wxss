@@ -1,0 +1,29 @@
+.loginBox{
+  height: 100vh;
+  /* background-color: green; */
+}
+
+.loginBoxTop{
+  height: 60vh;
+  /* background-color: greenyellow; */
+}
+
+.topItem{
+  /* background-color: honeydew; */
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid black;
+}
+.topItem image{
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.tip{
+  text-align: center;
+  font-size: 30rpx;
+  color: #cccccc;
+}

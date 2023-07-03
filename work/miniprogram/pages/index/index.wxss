@@ -1,0 +1,134 @@
+ .header{
+  display: flex;
+  margin:10rpx 0;
+}
+
+ .header image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+ .header .search{
+  border:1rpx solid #eee;
+  flex:1;
+  margin:0 20rpx;
+  font-size:26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #d43c33;
+  border-radius: 20rpx;
+}
+
+
+.recommendContainer{
+  padding: 20rpx;
+  border-bottom: 0.5px solid #bbbbbb;
+}
+
+
+.recommendScroll{
+  clear: both;
+  display: flex;
+  height: 300rpx;
+}
+
+.scorllItem{
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.recommendScroll .scorllItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.topList{
+  padding: 20rpx;
+}
+
+.scorllItem text{
+  font-size: 26rpx;
+  /*单行文本溢出隐藏*/
+  /* display: block;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  /*多行文本溢出隐藏，省略号代替*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*模式修改*/
+  -webkit-box-orient: vertical;  /*设置对其模式*/
+  -webkit-line-clamp:2 ; /*设置多行的行数*/
+}
+
+.topListSwiper{
+  height: 540rpx;
+  /* background-color: red; */
+  /* border: 1rpx solid red; */
+}
+
+.swiperItem{
+  /* background-color: #fbfbfb; */
+  /* background-color: orange; */
+  height: 450rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid rgb(155, 154, 154);
+  border-radius:25rpx ;
+  margin-right: 20rpx;
+}
+
+.swiperItem .title{
+  /* background-color: orchid; */
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-left: 12rpx;
+}
+
+.musicItem{
+  /* background-color: palegoldenrod; */
+  /*子元素会因为flex布局变成行内块元素*/
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.musicItem image{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 6rpx;
+}
+
+.musicItem .count{
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.musicItem .musicInfo{
+  max-width: 300rpx;
+
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.musicInfo .musicName{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  line-height: 50rpx;
+  height: 50%;
+  max-width: 300rpx;
+  font-size: 28rpx;
+}
+
+.musicItem .athorn{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  display: inline-block;
+  color: #bbbbbb;
+}

@@ -1,0 +1,19 @@
+<!--pages/charts/charts.wxml-->
+<view class="charts">
+  <view class="card" wx:for="{{Charts}}" wx:key="id" bindtap="goChartsSong" data-id="{{item.id}}">
+    <view class="cardTop">
+      <view class="cardtopL">
+        {{item.name}}
+      </view>
+      <view class="cardtopR">
+        {{item.updateFrequency}}
+      </view>
+    </view>
+    <view class="left">
+      <image src="{{item.coverImgUrl}}" mode=""/>
+    </view>
+    <view class="right" wx:for="{{item.tracks}}" wx:key="id">
+        <text class="text">{{index+1}} {{item.first}}-<text style="font-size: 25rpx;font-weight: 400;">{{item.second}}</text></text>
+    </view>
+  </view>
+</view>

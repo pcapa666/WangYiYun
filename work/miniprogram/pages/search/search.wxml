@@ -1,0 +1,60 @@
+<view class="searchContainer">
+  <!-- 头部搜索区域 -->
+  <view class="header">
+    <view class="searchInput">
+      <text class="iconfont icon-sousuo searchIcon"></text>
+      <input type="text" placeholder="{{placeHolderData}}" placeholder-class="placeholder" bindinput="handleInputChange" value="{{searchContent}}" />
+      <view class="clear" hidden="{{!searchContent}}" bindtap="clearContent">X</view>
+    </view>
+    <text class="searchBtn" bindtap="searchSongs">搜索</text>
+  </view>
+
+  <!-- 搜索内容展示 -->
+  <block wx:if="{{searchContent}}">
+    <view class="showSearchContent">
+      <view class="searchContent">搜索内容{{searchContent}}</view>
+      <view class="searchList">
+        <view class="searchItem" 
+              wx:for="{{searchList}}" 
+              wx:key="id" 
+              data-context="{{item.name}}"
+              bindtap="toSearchList">
+          <text class="iconfont icon-sousuo"></text>
+          <text class="content">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <!-- 历史板块 -->
+    <view class="history" wx:if="{{historyList.length}}">
+      <view class="title headerTitle">
+        <text>历史</text>
+        <text class="iconfont icon-shanchu" bindtap="deleteHistory"></text>
+      </view>
+      <view class="historyList">
+        <view class="historyItem" wx:for="{{historyList}}" wx:key="item" data-text="{{item}}" bindtap="selectHis">
+          {{item}}
+        </view>
+      </view>
+    </view>
+    <!-- 热搜榜 -->
+    <view class="hotContainer">
+      <view class="title">
+        热搜版
+      </view>
+      <view class="hotList">
+        <view class="hotItem {{index+1 <= 3 ?'thire':''}}" 
+              wx:for="{{hotList}}" 
+              wx:key="searchWord"
+              bindtap="toSearchList"
+              data-context="{{item.searchWord}}">
+          <text class="order">{{index + 1}}</text>
+          <text class="word">{{item.searchWord}}</text>
+          <image wx:key="{{item.iconUrl}}" class="iconImg" src="{{item.iconUrl}}" mode="" />
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

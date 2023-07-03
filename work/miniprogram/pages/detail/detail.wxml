@@ -1,0 +1,133 @@
+<view class="detailContainer">
+  <view class="topDetail">
+    <text class="iconfont icon-sousuo" bindtap="toSearch"></text>
+  </view>
+  <view class="loginDetail" wx:if="{{userInfo}}">
+    <view class="loginItem">
+      <image src="{{userInfo.avatarUrl}}" mode="" />
+    </view>
+
+    <view class="loginBox">
+      <text>{{userInfo.nickname}}</text>
+      <view class="userDetail">
+        <text>{{userInfo.follows}} 关注</text>
+        <text>|</text>
+        <text>{{userInfo.followeds}} 粉丝</text>
+        <text>|</text>
+        <text>Lv.{{level}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="loginDetail" wx:else>
+    <view class="loginItem">
+      <text class="iconfont icon-touxiang"></text>
+    </view>
+
+    <view class="loginBox" bindtap="GoLogin">
+      <text>立即登录 ></text>
+    </view>
+  </view>
+
+  <view class="appDetail">
+    <view class="appTop">
+      <view class="appItem" bindtap="toRecently">
+        <text class="iconfont icon-start-full"></text>
+        <text>最近播放</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-pailietubiao-14"></text>
+        <text>本地/下载</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-shangchuanyunpan"></text>
+        <text>云盘</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-034-musicstoreapp"></text>
+        <text>已购</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-weibiaoti--"></text>
+        <text>我的好友</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-shoucang"></text>
+        <text>收藏和赞</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-yinle"></text>
+        <text>我的播客</text>
+      </view>
+      <view class="appItem">
+        <text class="iconfont icon-Earphones"></text>
+        <text>乐迷团</text>
+      </view>
+    </view>
+    <view class="appAdd">
+      <text>+</text>
+      音乐应用
+    </view>
+  </view>
+
+  <view class="loveMusic">
+    <view class="loveMusicLeft" bindtap="toSongList">
+      <view class="box" style="background-image:url({{loveMusicList.coverImgUrl}});">
+        <view class="iconfont icon-xihuan1"></view>
+      </view>
+      <view class="text" wx:if="{{userInfo && CreateMusicList.length}}">
+        {{loveMusicList.name}}
+        <text>{{loveMusicList.trackCount}}首</text>
+      </view>
+      <view class="text" wx:else>
+        我喜欢的音乐
+        <text>0首</text>
+      </view>
+    </view>
+    <view class="loveMusicRight">
+      <view class="box">
+        <view class="iconfont icon-icon_xindong"></view>
+        <text>心动模式</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view id="createSheet" class="createSheet">
+    <view class="collectTop">
+      <text wx:if="{{userInfo && CreateMusicList.length}}">{{userInfo.nickname}}的歌单</text>
+      <text wx:else>创建歌单</text>
+      <view class="collectTopRight">
+        <text class="iconfont icon-gengduo-shuxiang"></text>
+      </view>
+    </view>
+
+    <!-- 用户登录的歌单 -->
+    <view class="createList" wx:if="{{userInfo && CreateMusicList.length}}">
+      <view class="createListItem" 
+            wx:for="{{CreateMusicList}}" 
+            wx:key="id" 
+            id="{{item.id}}" 
+            bindtap="toPlayList">
+        <view class="iconbox" style="background-image: url({{item.coverImgUrl}});"></view>
+        <view class="boxright">
+          <text class="musicName">{{item.name}}</text>
+          <text class="musicCount">{{item.trackCount}} 首</text>
+        </view>
+        <view class="iconfont icon-gengduo-shuxiang Share"></view>
+      </view>
+      <view class="morePlaylists">
+        <text>更多</text>
+      </view>
+    </view>
+
+    <!-- 未登录则创建歌单 -->
+    <view class="createListItem" wx:else>
+      <view class="iconbox">
+        <text class="iconfont icon-chuangjian"></text>
+      </view>
+      <view class="boxright">
+        点击添加歌单
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="navContainer">
+    <view class="nav-item" bindtap="goRecommendSong">
+      <text class="iconfont icon-meirituijian"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="nav-item" bindtap="toPersonalFm">
+      <text class="iconfont icon-FM_weixuanze"></text>
+      <text>私人FM</text>
+    </view>
+    <view class="nav-item">
+      <text class="iconfont icon-gedan"></text>
+      <text>歌单</text>
+    </view>
+    <view class="nav-item" bindtap="toCharts">
+      <text class="iconfont icon-paihangbang"></text>
+      <text>排行榜</text>
+    </view>
+  </view>

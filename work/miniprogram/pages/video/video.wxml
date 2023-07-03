@@ -1,0 +1,61 @@
+<view class="videoContainer">
+  <scroll-view 
+     scroll-x 
+     class="navScroll" 
+     enable-flex
+     scroll-into-view="{{'scroll'+navId}}"
+     scroll-with-animation
+  >
+    <view id="{{'scroll'+item.id}}" class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
+      <view class="navContent {{navId === item.id?'active':''}}" bindtap="changeNav" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+
+
+<!-- 微信开发文档中注明了一个页面超过三个video组件就会导致视频加载慢，且会转圈，这里使用img进行替换优化视频播放 -->
+  <scroll-view 
+    scroll-y 
+    class="videoScroll" 
+    refresher-enabled
+    bindrefresherrefresh="handleRefresher"
+    refresher-triggered="{{isTriggered}}"
+  >
+    <view class="videoItem" wx:for="{{videoList}}" wx:key="id">
+      <video wx:if="{{videoId === item.data.vid}}"
+        src="{{item.data.urlInfo.url}}" 
+        id="{{item.data.vid}}" 
+        bindtap="handlePlay"
+        poster="{{item.data.coverUrl}}" 
+        class="common"
+        object-fit="cover"
+        bindtimeupdate="handleTimeUpdate"
+        bindended="handleEnded" />
+      <image wx:else
+        src="{{item.data.coverUrl}}" 
+        bindtap="handlePlay" 
+        id="{{item.data.vid}}" 
+        class="common" mode=""/>
+
+      <view class="content">{{item.data.title}}</view>
+      <view class="footer">
+        <image src="{{item.data.creator.avatarUrl}}" class="avatar"/>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-shoucang1"></text>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo-shuxiang"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

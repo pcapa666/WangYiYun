@@ -1,0 +1,35 @@
+<!--pages/songList/songList.wxml-->
+<view class="recommendSoneContanier">
+  <view class="hearder">
+    <image src="{{recommendList.coverImgUrl}}" mode="aspectFill"/>
+  </view>
+
+  <view class="text">
+    <view class="urser">
+      <text space="emsp" style="font-size: 100rpx;">{{recommendList.name}}</text>
+      <text space="emsp">{{recommendList.description}}</text>
+    </view>
+  </view>
+
+  <view class="ListContainer">
+    <view class="ListHeader">
+      <view class="ListHeaderLeft" bindtap="">
+        <text class="iconfont icon-start-full"></text>
+        <text>播放全部</text>
+      </view>
+      <view class="iconfont icon-multipleChoiceList"></view>
+    </view>
+
+
+    <scroll-view class="listScroll" scroll-y>
+      <view class="srollItem" wx:for="{{recommendList.tracks}}" wx:key="id" data-index="{{index}}" data-song="{{item}}" bindtap="toSongDetail">
+        <image src="{{item.al.picUrl}}" mode=""/>
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <text class="author">{{item.ar[0].name}} - {{item.al.name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo-shuxiang"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

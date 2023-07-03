@@ -1,0 +1,16 @@
+.header{
+  padding-bottom: 10rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  color: #666;
+  float: left;
+}
+
+.header-right{
+  float: right;
+  line-height: 15rpx;
+  color: #9b9b9b;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}

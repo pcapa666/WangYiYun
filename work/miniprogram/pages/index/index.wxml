@@ -1,0 +1,49 @@
+<view class="index-container">
+  <view class="header">
+    <!-- <image src="../../images/tabBarImg/music.png" mode="" /> -->
+    <view class="search" bindtap="toSearch">
+      搜索音乐
+    </view>
+    <!-- <image src="../../images/tabBarImg/music_active.png" mode="" /> -->
+  </view>
+  <!-- 轮播图 -->
+  <Swiper swiper="{{bannerList}}"></Swiper>
+  <!-- 每日推荐等标签 -->
+  <navContainer></navContainer>
+
+  <view class="recommendContainer">
+    <NavHeader navTitle="推荐歌单" />
+    <scroll-view class="recommendScroll" enable-flex scroll-x>
+      <view class="scorllItem" wx:for="{{recommendList}}" id="{{item.id}}" wx:key="id" bindtap="toSongSheet">
+        <image src="{{item.picUrl}}" mode="" />
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  
+  <view class="topList">
+  <NavHeader navTitle="排行榜" />
+    <swiper class="topListSwiper" next-margin="15rpx" previous-margin="35rpx">
+      <swiper-item wx:for="{{topList}}" wx:key="name">
+        <view class="swiperItem">
+          <view class="title">{{item.name}}</view>
+          <view class="musicItem" 
+                wx:for="{{item.tracks}}" 
+                wx:key="id" 
+                wx:for-item="musicItem" 
+                data-list="{{item.tracks}}"
+                id="{{musicItem.id}}"
+                bindtap="toSongDetail">
+            <image src="{{musicItem.al.picUrl}}" mode=""/>
+            <text class="count">{{index+1}}</text>
+            <view class="musicInfo">
+              <text class="musicName">{{musicItem.name}}</text>
+              <text class="athorn">{{musicItem.ar[0].name}}</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+ 
+</view>

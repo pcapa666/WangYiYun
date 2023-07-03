@@ -1,0 +1,9 @@
+<!--components/searchHeader/searchHeader.wxml-->
+<view class="header">
+    <view class="searchInput">
+      <text class="iconfont icon-sousuo searchIcon"></text>
+      <input type="text" placeholder="{{placeHolderData}}" placeholder-class="placeholder" bindinput="handleInputChange" value="{{searchContent}}" />
+      <view class="clear" hidden="{{!searchContent}}" bindtap="clearContent">X</view>
+    </view>
+    <text class="searchBtn" bindtap="searchSongs" >搜索</text>
+  </view>

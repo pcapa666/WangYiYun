@@ -1,0 +1,32 @@
+<view class="recommendSoneContanier">
+  <view class="hearder">
+    <image src="../../images/swiperImg/item_01.jpg" mode=""/>
+    <view class="date">
+      <text class="day">{{day}}</text>
+      <text>/</text>
+      <text class="month">{{month}}</text>
+    </view>
+  </view>
+
+  <view class="ListContainer">
+    <view class="ListHeader">
+      <view class="ListHeaderLeft" bindtap="">
+        <text class="iconfont icon-start-full"></text>
+        <text>播放全部</text>
+      </view>
+      <view class="iconfont icon-multipleChoiceList"></view>
+    </view>
+
+
+    <scroll-view class="listScroll" scroll-y>
+      <view class="srollItem" wx:for="{{recommendList}}" wx:key="id" data-index="{{index}}" data-song="{{item}}" bindtap="toSongDetail">
+        <image src="{{item.al.picUrl}}" mode=""/>
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <text class="author">{{item.ar[0].name}} - {{item.al.name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo-shuxiang"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

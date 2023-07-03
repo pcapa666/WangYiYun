@@ -1,0 +1,43 @@
+<view class="searchContainer">
+  <!--pages/searchList/searchList.wxml-->
+<!-- 头部搜索区域 -->
+<header placeHolderData="{{placeHolderData}}" bind:handleInputChange="handleInputChange" bind:searchSongs="searchSongs" bind:clearContent="clearContent"></header>
+
+<!-- 搜索内容展示 -->
+<block wx:if="{{searchContent}}">
+  <view class="showSearchContent">
+    <view class="searchContent">搜索内容{{searchContent}}</view>
+    <view class="searchList">
+      <view class="searchItem" wx:for="{{searchList}}" wx:key="id">
+        <text class="iconfont icon-sousuo"></text>
+        <text class="content">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!-- 结果内容展示 -->
+<block wx:else>
+  <view class="ListContainer">
+    <view class="ListHeader">
+      <view class="ListHeaderLeft" bindtap="">
+        <text class="iconfont icon-start-full"></text>
+        <text>播放全部</text>
+      </view>
+      <view class="iconfont icon-multipleChoiceList"></view>
+    </view>
+
+
+    <scroll-view class="listScroll" scroll-y>
+      <view class="srollItem" wx:for="{{cloudSearchData}}" wx:key="id" data-index="{{index}}" data-song="{{item}}" bindtap="toSongDetail">
+        <image src="{{item.al.picUrl}}" mode="" />
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <text class="author">{{item.ar[0].name}} - {{item.al.name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo-shuxiang"></text>
+      </view>
+    </scroll-view>
+  </view>
+</block>
+</view>

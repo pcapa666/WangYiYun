@@ -1,0 +1,41 @@
+<view class="songDetailContainer">
+  <view class="rev" style="background-image:url({{backGroundImg}});">
+  </view>
+  <view class="abl">
+    <view class="musicInfo">
+      <text class="musicName">{{song.name}}</text>
+      <text class="musicAuthor">{{song.ar[0].name}}</text>
+    </view>
+    <!-- 歌曲图片 -->
+    <view class="musicImagebox">
+      <view class="discContainer {{isPlay && 'discAnimation'}}">
+        <image class="musicImg" src="{{song.al.picUrl}}" mode="" />
+      </view>
+    </view>
+
+    <!-- 播放器进度条 -->
+    <view class="middle">
+      <view class="progressControl">
+        <text>{{currentTime}}</text>
+        <!-- 总进度条 -->
+        <view class="barControl">
+          <!-- 实时进度条 -->
+          <view class="audio-currentTime-Bar" style="width: {{currentTimeWidth + 'rpx'}};">
+            <!-- 标注进度条播放位置的圆球 -->
+            <view class="audio-circle"></view>
+          </view>
+        </view>
+        <text>{{durationTime}}</text>
+      </view>
+    </view>
+
+    <!-- 底部控制块 -->
+    <view class="musicBottom">
+      <text class="iconfont {{icon}}"></text>
+      <text class="iconfont icon-shangyishoushangyige" id="pre" bindtap="handleSwitch"></text>
+      <text class="iconfont Big {{isPlay?'icon-zanting':'icon-bofang'}}" bindtap="handleMusicPlay"></text>
+      <text class="iconfont icon-xiayigexiayishou" id="next" bindtap="handleSwitch"></text>
+      <text class="iconfont icon-24gf-playlist"></text>
+    </view>
+  </view>
+</view>

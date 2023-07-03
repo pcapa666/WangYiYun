@@ -1,0 +1,8 @@
+
+<view>
+  <swiper class="banners" circular indicator-dots indicator-color="ivory" indicator-active-color="#d43c33">
+    <swiper-item wx:for="{{swiper}}" wx:key="encodeId">
+      <image src="{{item.imageUrl}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
